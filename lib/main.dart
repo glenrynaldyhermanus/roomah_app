@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:roomah/routes.dart';
+import 'package:roomah/src/components/text/roomah_text.dart';
 import 'package:roomah/src/res/colors.dart';
 import 'package:url_strategy/url_strategy.dart';
 
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: RoomahColors.secondary,
             foregroundColor: RoomahColors.textSecondary,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(4),
+              borderRadius: BorderRadius.circular(8),
             ),
             elevation: 0,
             textStyle: const TextStyle(
@@ -65,6 +65,22 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             shape: CircleBorder(),
             foregroundColor: RoomahColors.iconButtonPrimary),
+        segmentedButtonTheme: SegmentedButtonThemeData(
+          style: SegmentedButton.styleFrom(
+            side: const BorderSide(
+              width: 1,
+              color: RoomahColors.primaryAccent,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
+        ),
+        popupMenuTheme: const PopupMenuThemeData(
+            surfaceTintColor: Colors.white,
+            color: Colors.white,
+            textStyle: RoomahTextStyle.labelMedium,
+            shape: RoundedRectangleBorder()),
         useMaterial3: true,
       ),
     );

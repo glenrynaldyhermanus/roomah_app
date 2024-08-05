@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:roomah/src/components/bottomsheet/create_transaction_sheet.dart';
 import 'package:roomah/src/components/text/roomah_text.dart';
 
 class FinanceDashboardPage extends StatefulWidget {
@@ -78,7 +79,17 @@ class _FinanceDashboardPageState extends State<FinanceDashboardPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () async {
+          await showModalBottomSheet(
+            isScrollControlled: true,
+            backgroundColor: Colors.transparent,
+            enableDrag: true,
+            context: context,
+            builder: (bottomSheetContext) {
+              return const CreateTransactionSheet();
+            },
+          );
+        },
         child: const Icon(Icons.add),
       ),
     );

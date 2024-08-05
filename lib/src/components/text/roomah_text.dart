@@ -19,6 +19,15 @@ class RoomahTextStyle {
     color: RoomahColors.textPrimary,
     fontSize: 12,
   );
+  static const titleMedium = TextStyle(
+    color: RoomahColors.textPrimary,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+  );
+  static const titleLarge = TextStyle(
+    color: RoomahColors.textPrimary,
+    fontSize: 24,
+  );
 }
 
 class RoomahText extends StatelessWidget {
