@@ -1,6 +1,7 @@
 # roomah
 
-A mobile app to manage all your household activities, from finances to notes, in one convenient place.
+A mobile app to manage all your household activities, from finances to notes, in one convenient
+place.
 
 ## Getting Started
 
